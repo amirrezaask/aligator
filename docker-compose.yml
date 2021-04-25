@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  openresty:
+    image: openresty/openresty
+    container_name: openresty
+    restart: always
+    volumes:
+      - ./conf/nginx.conf:/usr/local/openresty/nginx/conf/nginx.conf
+      - ./lua:/usr/local/openresty/nginx/lua
+    expose:
+      - 8080
+    network_mode: host
