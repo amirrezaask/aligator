@@ -1,6 +1,6 @@
 local M = {}
 local ngx = require('ngx')
-local json = require('json')
+local json = require('lunajson')
 
 function M.read_config(path)
   local config_file = io.open(path, 'rb')
@@ -10,13 +10,8 @@ function M.read_config(path)
   return config
 end
 
-function M.index()
-  local config = json.decode(M.read_config('/etc/agg/config.json'))
-  local output = {}
-  for k, v in pairs(config) do
-    table.insert(output, k .. ' ' .. v)
-  end
-  ngx.say(table.concat(output, '\n'))
+function M.request_print()
+  ngx.say(json.encode({ name = 'amirreza' }))
 end
 
 return M

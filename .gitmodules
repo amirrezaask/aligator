@@ -2,3 +2,9 @@
 	path = lua/json
 	url = https://github.com/rxi/json.lua
 
+[submodule "lua/pprint"]
+	path = lua/pprint
+	url = https://github.com/jagt/pprint.lua
+[submodule "lua/jsonschema"]
+	path = lua/jsonschema
+	url = https://github.com/Tieske/lua-resty-ljsonschema
