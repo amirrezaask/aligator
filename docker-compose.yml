@@ -7,6 +7,7 @@ services:
     volumes:
       - ./conf/nginx.conf:/usr/local/openresty/nginx/conf/nginx.conf
       - ./lua:/usr/local/openresty/nginx/lua
+      - ./config.json:/etc/agg/config.json
     expose:
       - 8080
     network_mode: host
