@@ -58,6 +58,11 @@ function API:new(opts)
   return setmetatable(opts, API)
 end
 
+-- @returns table
+function API:call()
+
+end
+
 -- @returns API
 function Group:get_api_for_uri()
   local uri = ngx.var.request_uri
